@@ -1,0 +1,260 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #eeeeee;
+  color: #333333;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}
+
+.site-header {
+  padding: 22px 15px;
+  background: #111111;
+  color: white;
+  text-align: center;
+}
+
+.site-header h1 {
+  margin: 0;
+  font-size: 30px;
+}
+
+.site-header p {
+  margin: 8px 0 0;
+}
+
+.navigation {
+  min-height: 41px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 34px;
+  background: #00546a;
+}
+
+.navigation a {
+  color: white;
+  text-decoration: none;
+}
+
+.navigation a:hover {
+  text-decoration: underline;
+}
+
+.section {
+  padding: 18px;
+  border-bottom: 3px solid #dddddd;
+  background: white;
+}
+
+.section h2 {
+  margin: 0 0 18px;
+  color: #77809e;
+  font-size: 20px;
+}
+
+.section h3 {
+  margin: 0 0 8px;
+  font-size: 15px;
+}
+
+.welcome {
+  padding: 27px 18px;
+  text-align: center;
+}
+
+.welcome h2 {
+  margin-bottom: 18px;
+}
+
+.welcome p {
+  margin: 0 0 18px;
+}
+
+.home-image {
+  width: min(440px, 100%);
+  height: 190px;
+  margin: 4px auto 20px;
+  display: block;
+  object-fit: cover;
+}
+
+.table-wrap {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+
+th,
+td {
+  padding: 9px 8px;
+  border: 1px solid #cccccc;
+  text-align: left;
+  white-space: nowrap;
+}
+
+th {
+  background: #222222;
+  color: white;
+}
+
+.card-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.simple-card {
+  min-height: 90px;
+  padding: 11px;
+  border: 1px solid #cccccc;
+  background: white;
+}
+
+.simple-card p {
+  margin: 0;
+}
+
+.service-list {
+  margin: 0;
+  padding-left: 22px;
+  line-height: 1.9;
+}
+
+.simple-form {
+  width: min(460px, 100%);
+}
+
+.simple-form label {
+  margin: 12px 0 5px;
+  display: block;
+  font-weight: 700;
+}
+
+.simple-form input,
+.simple-form select,
+.simple-form textarea {
+  width: 100%;
+  padding: 9px;
+  border: 1px solid #bbbbbb;
+  border-radius: 2px;
+  background: white;
+  font: inherit;
+}
+
+.simple-form textarea {
+  resize: vertical;
+}
+
+.button {
+  margin-top: 14px;
+  padding: 9px 17px;
+  display: inline-block;
+  border: 0;
+  border-radius: 2px;
+  background: #00546a;
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+  font: inherit;
+}
+
+.button:hover {
+  background: #003e50;
+}
+
+.message {
+  color: #225b35;
+  font-weight: 700;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.gallery img {
+  width: 100%;
+  height: 175px;
+  display: block;
+  border: 1px solid #cccccc;
+  object-fit: cover;
+}
+
+.contact-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.contact-section p {
+  margin: 10px 0;
+}
+
+.site-footer {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  background: #111111;
+  color: white;
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+.site-footer a {
+  color: white;
+}
+
+@media (max-width: 700px) {
+  .navigation {
+    gap: 12px 22px;
+  }
+
+  .section {
+    padding: 15px;
+  }
+
+  .card-list,
+  .gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .contact-section {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 430px) {
+  .site-header h1 {
+    font-size: 25px;
+  }
+
+  .card-list,
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery img {
+    height: 200px;
+  }
+
+  .site-footer {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
